@@ -13,106 +13,40 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <!-- Favicon -->
     <link rel="icon" href="res/favicon.svg">
-    <title>ThoughtBubble | By Lakshaya Krishnaraj</title>
+    <title>Main Page | ThoughtBubble</title>
 </head>
 <body>
 
-    <!-- Copyright -->
-    <div class="author-text">
-        <p>Made by <a href="https://github.com/pixelpurfect" target="_blank"><b>Lakshaya Krishnaraj</b></a></p>
-    </div>
-    
-    <div class="container">
-        <header>
-            <h1>ThoughtBubble</h1>
-            <!-- Error message -->
-            <div class="alert-message"></div>
-            <div class="input-section">
-                <input type="text" placeholder="Add a note . . ." class="input input-bordered input-secondary w-full max-w-xs" />
-                <input type="date" class="input input-bordered input-secondary w-full max-w-xs schedule-date" />
-                <button class="btn btn-secondary add-task-button">
-                    <i class="bx bx-plus bx-sm"></i>
-                </button>
+    <!-- Main content -->
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-semibold text-center mb-8">Welcome to ThoughtBubble</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Card 1 -->
+            <div class="card bg-base-200">
+                <div class="card-body">
+                    <h2 class="card-title text-xl font-semibold mb-4">Create a New Note</h2>
+                    <p>Quickly jot down your thoughts and ideas.</p>
+                    <button class="btn btn-primary mt-4">Create Note</button>
+                </div>
             </div>
-        </header>
-
-        <div class="todos-filter">
-            <div class="dropdown">
-                <label tabindex="0" class="btn m-1">Filter</label>
-                <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                    <li onclick="filterNotes('all')"><a>All</a></li>
-                    <li onclick="filterNotes('pending')"><a>Pending</a></li>
-                    <li onclick="filterNotes('completed')"><a>Completed</a></li>
-                </ul>
+            <!-- Card 2 -->
+            <div class="card bg-base-200">
+                <div class="card-body">
+                    <h2 class="card-title text-xl font-semibold mb-4">View All Notes</h2>
+                    <p>See a list of all your notes organized by date, category, or tag.</p>
+                    <button class="btn btn-primary mt-4">View Notes</button>
+                </div>
             </div>
-            <button class="btn btn-secondary delete-all-btn">
-                Delete All
-            </button>
+            <!-- Card 3 -->
+            <div class="card bg-base-200">
+                <div class="card-body">
+                    <h2 class="card-title text-xl font-semibold mb-4">Organize Your Notes</h2>
+                    <p>Organize notes into folders, categories, or tags for easy retrieval.</p>
+                    <button class="btn btn-primary mt-4">Organize Notes</button>
+                </div>
+            </div>
         </div>
-
-        <table class="table w-full">
-            <thead>
-                <tr>
-                    <th>Note</th>
-                    <th>Due Date</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody class="notes-list-body">
-            </tbody>
-        </table>
-
     </div>
-
-    <!-- Note Editor -->
-<div class="note-editor">
-    <h2>Note Editor</h2>
-    <div class="editor-toolbar">
-        <button class="btn btn-sm btn-primary" onclick="formatText('bold')"><i class='bx bxs-bold'></i></button>
-        <button class="btn btn-sm btn-primary" onclick="formatText('italic')"><i class='bx bxs-italic'></i></button>
-        <button class="btn btn-sm btn-primary" onclick="formatText('underline')"><i class='bx bxs-underline'></i></button>
-        <button class="btn btn-sm btn-primary" onclick="formatText('insertUnorderedList')"><i class='bx bx-list-ul'></i></button>
-        <button class="btn btn-sm btn-primary" onclick="formatText('insertOrderedList')"><i class='bx bx-list-ol'></i></button>
-        <button class="btn btn-sm btn-primary" onclick="formatText('justifyLeft')"><i class='bx bx-text-left'></i></button>
-        <button class="btn btn-sm btn-primary" onclick="formatText('justifyCenter')"><i class='bx bx-text-center'></i></button>
-        <button class="btn btn-sm btn-primary" onclick="formatText('justifyRight')"><i class='bx bx-text-right'></i></button>
-        <input type="color" id="colorPicker" onchange="changeTextColor(this.value)">
-    </div>
-    <textarea id="noteContent" class="note-content" placeholder="Write your note here..."></textarea>
-</div>
-
-<!-- Organization and Navigation -->
-<div class="organization-navigation">
-    <h2>Organization and Navigation</h2>
-    <div class="folders-section">
-        <h3>Folders</h3>
-        <ul id="foldersList">
-            <!-- List of folders goes here -->
-        </ul>
-        <button class="btn btn-sm btn-primary" onclick="createNewFolder()">New Folder</button>
-    </div>
-    <div class="categories-section">
-        <h3>Categories</h3>
-        <ul id="categoriesList">
-            <!-- List of categories goes here -->
-        </ul>
-        <button class="btn btn-sm btn-primary" onclick="createNewCategory()">New Category</button>
-    </div>
-    <div class="tags-section">
-        <h3>Tags</h3>
-        <div id="tagsList">
-            <!-- List of tags goes here -->
-        </div>
-        <button class="btn btn-sm btn-primary" onclick="createNewTag()">New Tag</button>
-    </div>
-    <div class="search-section">
-        <h3>Search</h3>
-        <input type="text" id="searchInput" placeholder="Search notes...">
-        <button class="btn btn-sm btn-primary" onclick="searchNotes()">Search</button>
-    </div>
-</div>
-
 
     <!-- JS -->
     <script src="js/main.js"></script>
