@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="valentine">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--- Tailwind CSS & Daisy UI CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.18.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Favicon -->
+    <link rel="icon" href="res/favicon.svg">
+    <title>View Notes | ThoughtBubble</title>
+</head>
+<body>
+
+    <!-- Your view all notes page content goes here -->
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-semibold text-center mb-8">All Notes</h1>
+        <table class="w-full table table-zebra">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">Note Title</th>
+                    <th class="px-4 py-2">Note Content</th>
+                    <th class="px-4 py-2">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Note items will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
